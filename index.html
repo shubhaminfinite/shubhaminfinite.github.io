@@ -51,6 +51,22 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+<style>
+  #auto-num-wrapper {
+    counter-reset: line-number;
+  }
+  .auto-num {
+    counter-increment: line-number;
+  }
+  .auto-num:before {
+    content: counter(line-number)". ";
+  }
+
+  .no-link {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+</style>
 
 <body>
   
@@ -71,10 +87,10 @@
           <li><a href="#about"><span>About</span></a></li>
           <li><a href="#education"> <span>Education</span></a></li>
           <li><a href="#experience"> <span>Experience</span></a></li>
-<!--          <li><a href="#projects"> <span>Projects</span></a></li>-->
+          <li><a href="#publications"> <span>Research</span></a></li>
           <li><a href="#portfolio"> <span>Projects</span></a></li>
           <li><a href="#skills"> <span>Skills</span></a></li>
-          <li><a href="https://drive.google.com/file/d/1pT-Nk6AxY9ZOWBizuDb4htA3IiUF_fSe/view?usp=sharing" target="_blank"> <span>Resume</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1SxOSOa9mjf8SxYQHq1I2NDZATFdjCiLu/view?usp=share_link" target="_blank"> <span>Resume</span></a></li>
           <!-- <li><a href="#links"> <span>Resume & Links</span></a></li> -->
           <li><a href="#contacts"> <span>Contact</span></a></li>
 
@@ -85,6 +101,7 @@
           <a href="https://www.linkedin.com/in/shubham-saini-413620165" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
           <a href="https://github.com/shubhaminfinite" target="_blank" class="github"><i class="bx bxl-github"></i></a>
           <a href="mailto:shubham.cs@sric.iitr.ac.in" target="_blank" class="google"><i class="bx bxl-google"></i></a>
+          <a href="https://scholar.google.com/citations?user=rM7tA08AAAAJ&hl=en&oi=sra" target="_blank" class="scholar"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" width="18" height="18"/></a>
 
       </div>
 
@@ -141,13 +158,13 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
       <div class="row">
         <div class="col-lg-3 col-md-4">
           <div class="icon-box">
-            <i class="ri-global-line" style="color: #ffbb2c;"></i>
+            <i class="ri-settings-line" style="color: #ffbb2c;"></i>
             <h3>Reliablity and Life Testing</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
           <div class="icon-box">
-            <i class="ri-database-2-line" style="color: #5578ff;"></i>
+            <i class="ri-bar-chart-line" style="color: #5578ff;"></i>
             <h3>Bayesian Inference</h3>
           </div>
         </div>
@@ -211,7 +228,7 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
               <h5 style="text-align:left;padding: 0px 10px;">November 2018 - February 2023</h5>
               <h6 style="text-align:left;color:#fff;padding: 0px 10px;">Thesis Title: </h6>
               <ul style="text-align:left;color:#fff;">
-                <li>Distributed Database SystemsSome Contributions to Estimation Procedures for Lifetime Models using Censored Data</li>
+                <li>Some Contributions to Estimation Procedures for Lifetime Models using Censored Data</li>
               </ul>
             </div>
             <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
@@ -246,7 +263,7 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
       </div>
 
 
-    <div class="portfolio">
+    <!-- <div class="portfolio">
     <div class="container">
       <div class="section-title">
         <h2>Online Certification</h2>
@@ -329,7 +346,7 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
 
       </div>
     </div>
-    </div>
+    </div> -->
 
   </section>
   <!-- End Education Section -->
@@ -338,14 +355,25 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
 
   <!-- Start Experience Section -->
 
-  <section id="experience" class="services">
+  <section id="experience" class="experience services">
     <div class="container">
-      <div class="section-title">
+      <!-- <div class="section-title">
         <h2>Experience</h2>
-      </div>
+      </div> -->
+
       <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="experience-flters">
+            <!-- <li data-filter="*" class="filter-active">All</li> -->
+            <li data-filter=".filter-exp" class="filter-active">Experience</li>
+            <li data-filter=".filter-fdp">FDP'S</li>
+          </ul>
+        </div>
+      </div>  
+
+      <div class="row experience-container">
           <div class="col-lg-12" data-aos="fade-up">
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-md-12 mt-4 mt-md-0 icon-box experience-item filter-exp" data-aos="fade-up" data-aos-delay="100">
                 <h4 style="text-align:left;"><a href="https://www.asu.edu/" style="color:#12d640">Indian Institute of Technology Roorkee</a><br> </h4>
                 <h5 style="text-align:left;">March 2023 - Present</h5>
                 <p style="text-align:left;color:#fff"><em>Research Associate </em></p>
@@ -355,7 +383,7 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
                   <li>Collaborating with other team members to implement and test trading algorithms, and monitoring their performance to continuously improve the platform's trading capabilities.</li>
                 </ul>
               </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-md-12 mt-4 mt-md-0 icon-box experience-item filter-exp" data-aos="fade-up" data-aos-delay="100">
                 <h4 style="text-align:left;"><a href="https://www.augmenify.com/" style="color:#12d640">Ramjas College, University of Delhi</a><br> </h4>
                 <h5 style="text-align:left;">October 2021 - October 2022</h5>
                 <p style="text-align:left;color:#fff"><em>Assistant Professor</em></p>
@@ -365,16 +393,16 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
                   <li>Engaging in scholarly activities such as publishing research papers, attending conferences, and staying updated with the latest developments in the field of statistics.</li>
                 </ul>
               </div>
-            <!--
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">Epitome Corporation Pvt. Ltd.</a><br> </h4>
+              <div class="col-md-12 mt-4 mt-md-0 icon-box experience-item filter-fdp" data-aos="fade-up" data-aos-delay="100">
+                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">1. Epitome Corporation Pvt. Ltd.</a><br> </h4>
                 <h5 style="text-align:left;">July 2019 - Dec 2019</h5>
                 <p style="text-align:left;color:#fff"><em>Software Developer</em></p>
                 <ul style="text-align:left;">
-                  <li>Tested, designed, and developed backend APIs of WebRTC enabled multi‑party video conferencing web application and delivered the project 15 days ahead of schedule by efficiently designing the flow of the project.</li>
+                  <li>Test FDP.</li>
                 </ul>
               </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <!--
+              <div class="col-md-12 mt-4 mt-md-0 icon-box experience-item filter-exp" data-aos="fade-up" data-aos-delay="100">
                 <h4 style="text-align:left;"><a href="https://www.meditab.com/" target="_blank" style="color:#12d640">Meditab Software Pvt. Ltd.</a><br> </h4>
                 <h5 style="text-align:left;">May 2018 - June 2018</h5>
                 <p style="text-align:left;color:#fff"><em>Programmer Analyst</em></p>
@@ -385,7 +413,7 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
                   <li>Mentored 2 interns to optimize the pill detection algorithm and to include the multiprocessing pipeline, increasing overall speed by 75%.</li>
                 </ul>
               </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-md-12 mt-4 mt-md-0 icon-box experience-item filter-exp" data-aos="fade-up" data-aos-delay="100">
                 <h4 style="text-align:left;"><a href="https://www.sac.gov.in/Vyom/index.jsp" target="_blank" style="color:#12d640">Space Application Centre, ISRO</a><br> </h4>
                 <h5 style="text-align:left;">Jan 2018 - May 2018</h5>
                 <p style="text-align:left;color:#fff"><em>Research Intern</em></p>
@@ -402,6 +430,70 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
 
   <!-- End Experience Section -->
 
+   <!-- Start Publications Section -->
+
+   <section id="publications" class="publications services">
+    <div class="container">
+
+      
+      <!-- <div class="section-title">
+        <h2>Publications</h2>
+      </div> -->
+
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="publications-flters">
+            <!-- <li data-filter="*" class="filter-active">All</li> -->
+            <li data-filter=".filter-pub" class="filter-active">Publications</li>
+            <li data-filter=".filter-conf">Conferences</li>
+          </ul>
+        </div>
+      </div>  
+
+      <div class="row publications-container">
+          <div class="col-lg-12" data-aos="fade-up">
+              <ol id="auto-num-wrapper" class="list-group list-group-numbered">
+                <a href="https://doi.org/10.1007/s12597-021-00523-7" target="_blank" class="no-link publications-item filter-pub">
+                  <li class="list-group-item align-items-start col-md-12 mt-4 mt-md-0 icon-box">
+                    <div class="ms-2 me-auto auto-num" style="text-align:left;">
+                      Ajit Chaturvedi, Renu Garg & <b>Shubham Saini</b> (2021). Estimation and testing
+                      procedures for the reliability characteristics of Kumaraswamy-G distributions
+                      based on the progressively first failure censored samples, OPSEARCH 59,
+                      494–517.
+                      https://doi.org/10.1007/s12597-021-00523-7 (Springer)
+                    </div>
+                  </li>
+                </a>
+                <a href="https://doi.org/10.1080/00949655.2020.1856846" target="_blank" class="no-link publications-item filter-pub">
+                  <li class="list-group-item align-items-start col-md-12 mt-4 mt-md-0 icon-box">
+                    <div class="ms-2 me-auto auto-num" style="text-align:left;">
+                      <b>Shubham Saini</b>, Ajit Chaturvedi & Renu Garg (2021) Estimation of stress–strength
+                      reliability for generalized Maxwell failure distribution under progressive first
+                      failure censoring, Journal of Statistical Computation and Simulation, 91:7,
+                      1366-1393,
+                      https://doi.org/10.1080/00949655.2020.1856846 (Taylor & Francis, IF:1.225)
+                    </div>
+                  </li>
+                </a>
+
+                <!-- Here -->
+                <a href="https://doi.org/10.1080/00949655.2020.1856846" target="_blank" class="no-link publications-item filter-conf">
+                  <li class="list-group-item align-items-start col-md-12 mt-4 mt-md-0 icon-box">
+                    <div class="ms-2 me-auto auto-num" style="text-align:left;">
+                      <b>Test Conferences</b>
+                    </div>
+                  </li>
+                </a>
+                <!-- to here -->
+
+              </ol>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- End Publications Section -->
+
 
 
   <!-- Start Project Section -->
@@ -412,7 +504,7 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
         <h2>Projects</h2>
       </div>
 
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
@@ -420,7 +512,7 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
             <li data-filter=".filter-project">Project</li>
           </ul>
         </div>
-      </div>
+      </div> -->
 
       <div class="row portfolio-container">
 
@@ -450,7 +542,7 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <center><h4>Music Streaming Website</h4></center>
           <div class="portfolio-wrap">
             <img src="assets/img/project/musicplayer.jpg" class="img-fluid" alt="">
@@ -476,20 +568,7 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
           </div>
         </div>
 
-        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4>To-Do App</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/todo.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-                <a href="projects/todo.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
         <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <!-- <br> -->
           <center><h4>Resume Section Classifier</h4></center>
           <div class="portfolio-wrap">
             <img src="assets/img/project/resume.jpg" class="img-fluid" alt="">
@@ -501,19 +580,6 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
             </div>
           </div>
         </div>
-
-        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <br>
-          <center><h4>Tech Blog</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/blog.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-                <a href="projects/blog.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div> -->
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-project">
           <center><h4>Video Description Generator</h4></center>
@@ -542,7 +608,6 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
         
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <!-- <br> -->
           <center><h4>Image Generator</h4></center>
           <div class="portfolio-wrap">
             <img src="assets/img/project/gan.jpg" class="img-fluid" alt="">
@@ -552,7 +617,7 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -576,19 +641,19 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
                 <p style="text-align:left;">
                   <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="vectorlogo.zone" height="50" width="150">
                   <img src="https://www.vectorlogo.zone/logos/r-project/r-project-official.svg" alt="vectorlogo.zone" height="50" width="120">
-                  <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="vectorlogo.zone" height="70" width="130">
-                  
-
+                  <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="vectorlogo.zone" height="50" width="120">
+                  <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="vectorlogo.zone" height="50" width="120">
+                  <img src="https://cdn.cdnlogo.com/logos/c/36/c.svg" alt="vectorlogo.zone" height="70" width="130">
+                  <img src="https://cdn.cdnlogo.com/logos/c/76/c.svg" alt="vectorlogo.zone" height="70" width="130">
                 </p>
             </div>
             <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
               <h4 style="text-align:left;color:#09203a">Softwares</h4>
                 <p style="text-align:left;">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg" alt="vectorlogo.zone">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg" alt="vectorlogo.zone" height="50" width="150">
                   <img src="https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-horizontal.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="vectorlogo.zone">
+                  <img src="assets/img/mathematica.png" alt="vectorlogo.zone" height="75" width="75">
+                  <!-- <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="vectorlogo.zone">  -->
                   <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="vectorlogo.zone">
                   <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="vectorlogo.zone">
                   <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="vectorlogo.zone">
@@ -600,8 +665,8 @@ I am enthusiastic about collaborating with other researchers, exploring new meth
                 <p style="text-align:left;">
                   <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="vectorlogo.zone">
                   <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg" alt="vectorlogo.zone">
+                  <!-- <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="vectorlogo.zone">
+                  <img src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg" alt="vectorlogo.zone"> -->
                   <img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" alt="vectorlogo.zone">
               </p>
           </div>

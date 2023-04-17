@@ -141,7 +141,43 @@
       });
     });
 
+    var publicationsIsotope = $('.publications-container').isotope({
+      itemSelector: '.publications-item',
+      layoutMode: 'fitRows'
+    });
+
+    $('#publications-flters li').on('click', function() {
+      $("#publications-flters li").removeClass('filter-active');
+      $(this).addClass('filter-active');
+
+      publicationsIsotope.isotope({
+        filter: $(this).data('filter')
+      });
+    });
+    publicationsIsotope.isotope({
+      filter: ".filter-pub"
+    });
+
+
+    var experienceIsotope = $('.experience-container').isotope({
+      itemSelector: '.experience-item',
+      layoutMode: 'fitRows'
+    });
+
+    $('#experience-flters li').on('click', function() {
+      $("#experience-flters li").removeClass('filter-active');
+      $(this).addClass('filter-active');
+
+      experienceIsotope.isotope({
+        filter: $(this).data('filter')
+      });
+    });
+    experienceIsotope.isotope({
+      filter: ".filter-exp"
+    });
   });
+
+  
 
   // Initiate venobox (lightbox feature used in portofilo)
   $(document).ready(function() {
