@@ -1160,3 +1160,7 @@ section .container {
     transform: translateX(-50%);
   }
 }
+
+.publications-item {
+  right: 0;
+}
